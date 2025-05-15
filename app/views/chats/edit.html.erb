@@ -1,0 +1,28 @@
+<h1>Edit Chat</h1>
+
+<%= form_with model: @chat do |form| %>
+  <% if @chat.errors.any? %>
+    <div class="errors">
+      <h2><%= pluralize(@chat.errors.count, "error") %> prohibited this chat from being saved:</h2>
+      <ul>
+        <% @chat.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :sender_id, "Sender" %><br>
+    <%= form.collection_select :sender_id, @users, :id, :first_name, prompt: "Select sender" %>
+  </div>
+
+  <div>
+    <%= form.label :receiver_id, "Receiver" %><br>
+    <%= form.collection_select :receiver_id, @users, :id, :first_name, prompt: "Select receiver" %>
+  </div>
+
+  <div>
+    <%= form.submit "Update Chat" %>
+  </div>
+<% end %>

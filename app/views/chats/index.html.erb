@@ -17,7 +17,10 @@
         <td><%= chat.id %></td>
         <td><%= chat.sender.email if chat.sender %></td>
         <td><%= chat.receiver.email if chat.receiver %></td>
-        <td><%= link_to "Show", chat_path(chat) %></td>
+        <td>
+          <%= link_to "Show", chat_path(chat) %> |
+          <%= link_to "Edit", edit_chat_path(chat) %>
+        </td>
       </tr>
     <% end %>
   </tbody>

@@ -5,4 +5,23 @@
 <p><strong>First Name:</strong> <%= @user.first_name %></p>
 <p><strong>Last Name:</strong> <%= @user.last_name %></p>
 
+<hr>
+
+<h2>Chats</h2>
+<ul>
+  <% @user.chats.each do |chat| %>
+    <li><%= link_to "Chat ##{chat.id}", chat_path(chat) %></li>
+  <% end %>
+</ul>
+
+<h2>Messages</h2>
+<ul>
+  <% @user.messages.each do |msg| %>
+    <li><%= msg.body %> (en <%= link_to "Chat ##{msg.chat.id}", chat_path(msg.chat) %>)</li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "Edit User", edit_user_path(@user) %> |
 <%= link_to "Back to Users", users_path %>

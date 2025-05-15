@@ -1,7 +1,22 @@
 <h1>Chat Details</h1>
 
 <p><strong>Chat ID:</strong> <%= @chat.id %></p>
-<p><strong>Sender ID:</strong> <%= @chat.sender_id %></p>
-<p><strong>Receiver ID:</strong> <%= @chat.receiver_id %></p>
+<p><strong>Sender:</strong> <%= @chat.sender.first_name %></p>
+<p><strong>Receiver:</strong> <%= @chat.receiver.first_name %></p>
 
+<hr>
+
+<h2>Messages in this Chat</h2>
+<ul>
+  <% @chat.messages.each do |msg| %>
+    <li>
+      <%= msg.body %> - by <%= msg.user.first_name %>
+      (<%= link_to "View", message_path(msg) %>)
+    </li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "Edit Chat", edit_chat_path(@chat) %> |
 <%= link_to "Back to Chats", chats_path %>

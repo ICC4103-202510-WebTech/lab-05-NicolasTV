@@ -1,8 +1,11 @@
 <h1>Message Details</h1>
 
 <p><strong>Message ID:</strong> <%= @message.id %></p>
-<p><strong>Chat ID:</strong> <%= @message.chat_id %></p>
-<p><strong>User ID:</strong> <%= @message.user_id %></p>
+<p><strong>Chat:</strong> <%= link_to "Chat ##{@message.chat.id}", chat_path(@message.chat) %></p>
+<p><strong>User:</strong> <%= link_to @message.user.first_name, user_path(@message.user) %></p>
 <p><strong>Body:</strong> <%= @message.body %></p>
 
+<hr>
+
+<%= link_to "Edit Message", edit_message_path(@message) %> |
 <%= link_to "Back to Messages", messages_path %>

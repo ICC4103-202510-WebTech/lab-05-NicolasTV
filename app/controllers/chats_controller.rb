@@ -18,7 +18,22 @@ class ChatsController < ApplicationController
       redirect_to chats_path, notice: "Chat created successfully"
     else
       @users = User.all
-      render :new
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @chat = Chat.find(params[:id])
+    @users = User.all
+  end
+
+  def update
+    @chat = Chat.find(params[:id])
+    if @chat.update(chat_params)
+      redirect_to @chat, notice: "Chat updated successfully"
+    else
+      @users = User.all
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -28,4 +43,3 @@ class ChatsController < ApplicationController
     params.require(:chat).permit(:sender_id, :receiver_id)
   end
 end
-

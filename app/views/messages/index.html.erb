@@ -19,7 +19,10 @@
         <td><%= message.chat_id %></td>
         <td><%= message.user.email if message.user %></td>
         <td><%= message.body %></td>
-        <td><%= link_to "Show", message_path(message) %></td>
+        <td>
+          <%= link_to "Show", message_path(message) %> |
+          <%= link_to "Edit", edit_message_path(message) %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +35,3 @@
   <li><%= link_to "View Users", users_path %></li>
   <li><%= link_to "View Chats", chats_path %></li>
 </ul>
-

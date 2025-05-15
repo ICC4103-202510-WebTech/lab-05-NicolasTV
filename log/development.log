@@ -1564,3 +1564,1707 @@ Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-04-
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='WhatsNew'*/[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='WhatsNew'*/[0m
   [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='WhatsNew'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='WhatsNew'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='WhatsNew'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='WhatsNew'*/[0m
+Started GET "/" for ::1 at 2025-05-15 12:49:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='WhatsNew'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 50.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 6.6ms (2 queries, 0 cached) | GC: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_user_path' for #<ActionView::Base:0x0000000000c788>)
+Caused by: NoMethodError (undefined method `edit_user_path' for #<ActionView::Base:0x0000000000c788>)
+
+Information for: ActionView::Template::Error (undefined method `edit_user_path' for #<ActionView::Base:0x0000000000c788>):
+    23:         <td><%= user.messages.count %></td>
+    24:         <td>
+    25:           <%= link_to "Show", user_path(user) %> |
+    26:           <%= link_to "Edit", edit_user_path(user) %>
+    27:         </td>
+    28:       </tr>
+    29:     <% end %>
+  
+app/views/users/index.html.erb:26
+app/views/users/index.html.erb:17
+
+Information for cause: NoMethodError (undefined method `edit_user_path' for #<ActionView::Base:0x0000000000c788>):
+  
+app/views/users/index.html.erb:26
+app/views/users/index.html.erb:17
+Started GET "/favicon.ico" for ::1 at 2025-05-15 12:49:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2025-05-15 12:52:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='WhatsNew'*/[0m
+  
+SyntaxError (/Users/natorres/Desktop/web/lab-05-NicolasTV/config/routes.rb:21: syntax error, unexpected `end'):
+  
+config/routes.rb:21: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2025-05-15 12:54:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='WhatsNew'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 2 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 3 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 4 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 5 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 6 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 7 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 8 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 9 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 10 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 11 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 12 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 25.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | GC: 0.0ms)
+Completed 200 OK in 158ms (Views: 40.9ms | ActiveRecord: 3.0ms (13 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for ::1 at 2025-05-15 12:54:07 -0400
+Started GET "/assets/application-89ccb7a5.js" for ::1 at 2025-05-15 12:54:07 -0400
+Started GET "/assets/turbo.min-1262d735.js" for ::1 at 2025-05-15 12:54:07 -0400
+Started GET "/assets/@popperjs--core-7f8b886d.js" for ::1 at 2025-05-15 12:54:07 -0400
+Started GET "/assets/controllers/application-3affb389.js" for ::1 at 2025-05-15 12:54:07 -0400
+Started GET "/assets/controllers/hello_controller-708796bd.js" for ::1 at 2025-05-15 12:54:07 -0400
+Started GET "/assets/controllers/index-ee64e1f1.js" for ::1 at 2025-05-15 12:54:07 -0400
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/bootstrap-1a5d4f73.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:54:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:54:08 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:54:09 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:54:09 -0400
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:54:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/users/new" for ::1 at 2025-05-15 12:54:19 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 8.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:54:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:54:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:54:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:54:19 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:54:20 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:54:20 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:54:20 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:54:20 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:54:20 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:54:20 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:54:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started POST "/users" for ::1 at 2025-05-15 12:54:22 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"", "last_name"=>"", "email"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='WhatsNew',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1 /*action='create',application='WhatsNew',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='WhatsNew',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 43ms (Views: 2.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:54:22 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:54:22 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:54:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:54:22 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:54:22 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:54:22 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:54:22 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:54:22 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:54:23 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:54:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started POST "/users" for ::1 at 2025-05-15 12:54:37 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"aesdfasdf", "last_name"=>"asdfasdf", "email"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='WhatsNew',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'asdfasdf@sdfasdfasd' LIMIT 1 /*action='create',application='WhatsNew',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at") VALUES ('asdfasdf@sdfasdfasd', 'aesdfasdf', 'asdfasdf', '2025-05-15 16:54:37.319454', '2025-05-15 16:54:37.319454') RETURNING "id" /*action='create',application='WhatsNew',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='WhatsNew',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 48ms (ActiveRecord: 2.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2025-05-15 12:54:37 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 2 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 3 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 4 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 5 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 6 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 7 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 8 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 9 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 10 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 11 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 12 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 13 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 15.1ms | GC: 2.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | GC: 2.7ms)
+Completed 200 OK in 51ms (Views: 15.5ms | ActiveRecord: 0.8ms (14 queries, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:54:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:54:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:54:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:54:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:54:37 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:54:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:54:38 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:54:38 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:54:38 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:54:38 -0400
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:54:38 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:54:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:54:38 -0400
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:54:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:54:38 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:54:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/users" for ::1 at 2025-05-15 12:54:55 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 2 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 3 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 4 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 5 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 6 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 7 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 8 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 9 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 10 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 11 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 12 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 13 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 11.7ms | GC: 0.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.1ms)
+Completed 200 OK in 53ms (Views: 12.1ms | ActiveRecord: 0.8ms (14 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:54:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:54:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:54:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:54:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:54:55 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:54:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:54:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:54:56 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:54:56 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:54:56 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:54:56 -0400
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:54:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/users" for ::1 at 2025-05-15 12:54:58 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 2 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 3 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 4 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 5 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 6 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 7 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 8 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 9 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 10 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 11 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 12 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 13 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 11.3ms | GC: 0.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | GC: 0.5ms)
+Completed 200 OK in 49ms (Views: 11.8ms | ActiveRecord: 0.7ms (14 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:54:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:54:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:54:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:54:58 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:54:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:54:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:54:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:54:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/chats" for ::1 at 2025-05-15 12:54:59 -0400
+Processing by ChatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering chats/index.html.erb within layouts/application
+  [1m[36mChat Load (0.1ms)[0m  [1m[34mSELECT "chats".* FROM "chats" /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:54:59 -0400
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  Rendered chats/index.html.erb within layouts/application (Duration: 40.9ms | GC: 5.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | GC: 6.0ms)
+Completed 200 OK in 87ms (Views: 41.9ms | ActiveRecord: 1.1ms (21 queries, 11 cached) | GC: 6.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:54:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:54:59 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:54:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:00 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/messages" for ::1 at 2025-05-15 12:55:01 -0400
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  Rendered messages/index.html.erb within layouts/application (Duration: 11.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 13.3ms | ActiveRecord: 0.5ms (11 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:01 -0400
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/chats" for ::1 at 2025-05-15 12:55:02 -0400
+Processing by ChatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering chats/index.html.erb within layouts/application
+  [1m[36mChat Load (0.1ms)[0m  [1m[34mSELECT "chats".* FROM "chats" /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  Rendered chats/index.html.erb within layouts/application (Duration: 15.0ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | GC: 0.0ms)
+Completed 200 OK in 57ms (Views: 15.7ms | ActiveRecord: 0.6ms (21 queries, 11 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:55:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:55:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:02 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:03 -0400
+Started GET "/users" for ::1 at 2025-05-15 12:55:04 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 2 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 3 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 4 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 5 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 6 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 7 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 8 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 9 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 10 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 11 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 12 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 13 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 18.2ms | GC: 2.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | GC: 2.7ms)
+Completed 200 OK in 56ms (Views: 18.3ms | ActiveRecord: 1.1ms (14 queries, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:04 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/" for ::1 at 2025-05-15 12:55:05 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 2 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 3 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 4 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 5 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 6 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 7 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 8 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 9 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 10 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 11 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 12 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 13 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 14.8ms | GC: 3.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | GC: 3.1ms)
+Completed 200 OK in 52ms (Views: 15.1ms | ActiveRecord: 0.9ms (14 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:55:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:55:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:55:05 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:06 -0400
+Started GET "/chats" for ::1 at 2025-05-15 12:55:08 -0400
+Processing by ChatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering chats/index.html.erb within layouts/application
+  [1m[36mChat Load (0.1ms)[0m  [1m[34mSELECT "chats".* FROM "chats" /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='WhatsNew',controller='chats'*/[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  ↳ app/views/chats/index.html.erb:19
+  Rendered chats/index.html.erb within layouts/application (Duration: 24.0ms | GC: 4.6ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | GC: 4.6ms)
+Completed 200 OK in 67ms (Views: 24.3ms | ActiveRecord: 1.0ms (21 queries, 11 cached) | GC: 4.6ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:55:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:55:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:08 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/messages" for ::1 at 2025-05-15 12:55:09 -0400
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1 /*action='index',application='WhatsNew',controller='messages'*/[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  ↳ app/views/messages/index.html.erb:20
+  Rendered messages/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | GC: 0.4ms)
+Completed 200 OK in 51ms (Views: 10.3ms | ActiveRecord: 0.5ms (11 queries, 4 cached) | GC: 0.4ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:55:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:55:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:09 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:10 -0400
+Started GET "/" for ::1 at 2025-05-15 12:55:12 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 1 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 2 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 3 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 4 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 5 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 6 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 7 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 8 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 9 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 10 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 11 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 12 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mMessage Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = 13 /*action='index',application='WhatsNew',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 13.2ms | GC: 0.4ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 0.4ms)
+Completed 200 OK in 54ms (Views: 13.6ms | ActiveRecord: 0.9ms (14 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/assets/enums.js" for ::1 at 2025-05-15 12:55:12 -0400
+Started GET "/assets/modifiers/index.js" for ::1 at 2025-05-15 12:55:12 -0400
+Started GET "/_/a0ba12d2.js" for ::1 at 2025-05-15 12:55:12 -0400
+Started GET "/assets/modifiers/applyStyles.js" for ::1 at 2025-05-15 12:55:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a0ba12d2.js"):
+  
+Started GET "/assets/modifiers/arrow.js" for ::1 at 2025-05-15 12:55:12 -0400
+Started GET "/assets/modifiers/computeStyles.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/modifiers/eventListeners.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/modifiers/flip.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/modifiers/hide.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/modifiers/offset.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/modifiers/popperOffsets.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/modifiers/preventOverflow.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getCompositeRect.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/7a91f8b9.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getWindow.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/instanceOf.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7a91f8b9.js"):
+  
+Started GET "/_/7742d4ca.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/popper.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/b8df2d1e.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/7742d4ca.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/b8df2d1e.js"):
+  
+Started GET "/assets/dom-utils/getWindowScroll.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/popper-lite.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getNodeName.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getWindowScrollBarX.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getDocumentElement.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/isScrollParent.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getComputedStyle.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getLayoutRect.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/listScrollParents.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getScrollParent.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getParentNode.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getOffsetParent.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/084d303b.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/084d303b.js"):
+  
+Started GET "/assets/utils/detectOverflow.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getViewportRect.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getNodeScroll.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/bb24ce41.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/2d19854a.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/2d19854a.js"):
+  
+Started GET "/_/c7d11060.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/bb24ce41.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/_/c7d11060.js"):
+  
+Started GET "/assets/dom-utils/getDocumentRect.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/dom-utils/getHTMLElementScroll.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/a9ca29ce.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/6a201025.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/utils/getOppositeVariationPlacement.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/a9ca29ce.js"):
+  
+Started GET "/assets/utils/computeAutoPlacement.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/6a201025.js"):
+  
+Started GET "/assets/utils/getMainAxisFromPlacement.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/_/1ba79728.js" for ::1 at 2025-05-15 12:55:13 -0400
+Started GET "/assets/utils/getOppositePlacement.js" for ::1 at 2025-05-15 12:55:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_/1ba79728.js"):
+  
