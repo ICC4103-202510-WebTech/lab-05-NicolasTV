@@ -1,0 +1,21 @@
+<h1>New Message</h1>
+
+<%= form_with model: @message do |f| %>
+  <% if @message.errors.any? %>
+    <ul>
+      <% @message.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p><%= f.label :chat_id %><br>
+     <%= f.select :chat_id, options_from_collection_for_select(@chats, :id, :id) %></p>
+
+  <p><%= f.label :user_id, "Author" %><br>
+     <%= f.select :user_id, options_from_collection_for_select(@users, :id, :email) %></p>
+
+  <p><%= f.label :body %><br><%= f.text_area :body %></p>
+
+  <%= f.submit "Send Message" %>
+<% end %>

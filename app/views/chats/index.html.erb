@@ -1,0 +1,32 @@
+<h1>All Chats</h1>
+
+<%= link_to "Add New Chat", new_chat_path, class: "btn btn-primary" %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Sender</th>
+      <th>Receiver</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @chats.each do |chat| %>
+      <tr>
+        <td><%= chat.id %></td>
+        <td><%= chat.sender.email if chat.sender %></td>
+        <td><%= chat.receiver.email if chat.receiver %></td>
+        <td><%= link_to "Show", chat_path(chat) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Navigation</h2>
+<ul>
+  <li><%= link_to "View Users", users_path %></li>
+  <li><%= link_to "View Messages", messages_path %></li>
+</ul>

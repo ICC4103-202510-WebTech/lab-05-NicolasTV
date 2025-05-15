@@ -1,0 +1,18 @@
+<!-- app/views/users/new.html.erb -->
+<h1>New User</h1>
+
+<%= form_with model: @user do |f| %>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p><%= f.label :first_name %><br><%= f.text_field :first_name %></p>
+  <p><%= f.label :last_name %><br><%= f.text_field :last_name %></p>
+  <p><%= f.label :email %><br><%= f.email_field :email %></p>
+
+  <%= f.submit "Create User" %>
+<% end %>

@@ -1,0 +1,36 @@
+<h1>All Users</h1>
+
+<%= link_to "Add New User", new_user_path, class: "btn btn-primary" %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= link_to "Show", user_path(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Navigation</h2>
+<ul>
+  <li><%= link_to "View Chats", chats_path %></li>
+  <li><%= link_to "View Messages", messages_path %></li>
+</ul>
+
+
