@@ -1,11 +1,18 @@
 <h1>Message Details</h1>
 
-<p><strong>Message ID:</strong> <%= @message.id %></p>
+<p><strong>ID:</strong> <%= @message.id %></p>
 <p><strong>Chat:</strong> <%= link_to "Chat ##{@message.chat.id}", chat_path(@message.chat) %></p>
-<p><strong>User:</strong> <%= link_to @message.user.first_name, user_path(@message.user) %></p>
+<p><strong>User:</strong> <%= link_to @message.user.email, user_path(@message.user) %></p>
 <p><strong>Body:</strong> <%= @message.body %></p>
 
 <hr>
 
-<%= link_to "Edit Message", edit_message_path(@message) %> |
 <%= link_to "Back to Messages", messages_path %>
+
+<% if can? :edit, @message %>
+  | <%= link_to "Edit", edit_message_path(@message) %>
+<% end %>
+
+<% if can? :destroy, @message %>
+  | <%= link_to "Delete", message_path(@message), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>

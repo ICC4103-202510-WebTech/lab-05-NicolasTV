@@ -20,8 +20,18 @@
         <td><%= message.user.email if message.user %></td>
         <td><%= message.body %></td>
         <td>
-          <%= link_to "Show", message_path(message) %> |
-          <%= link_to "Edit", edit_message_path(message) %>
+        <td>
+        <%= link_to "Show", message_path(message) %>
+      
+        <% if can? :edit, message %>
+          | <%= link_to "Edit", edit_message_path(message) %>
+        <% end %>
+      
+        <% if can? :destroy, message %>
+          | <%= link_to "Delete", message_path(message), method: :delete, data: { confirm: "Are you sure?" } %>
+        <% end %>
+      </td>
+      
         </td>
       </tr>
     <% end %>
