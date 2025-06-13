@@ -6,11 +6,17 @@ class Ability
   def initialize(user)
 
     return unless user.present?
+    
+    can [:new, :create], Chat
 
-    can :read, :all
+    can :read, Chat do |chat|
+      chat.sender_id == user.id || chat.receiver_id == user.id
+    end
+
     can :create, Message
     can [:update, :destroy], Message, user_id: user.id
-    
+  end
+end
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
@@ -35,5 +41,4 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
-  end
-end
+

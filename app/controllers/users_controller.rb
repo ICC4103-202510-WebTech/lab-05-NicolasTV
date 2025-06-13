@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :ensure_admin!
+
   def index
     @users = User.all
   end
@@ -39,5 +40,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email)
+  end
+  
+  def ensure_admin!
+    redirect_to chats_path, alert: "Access denied." unless current_user.admin?
   end
 end

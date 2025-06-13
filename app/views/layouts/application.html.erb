@@ -30,6 +30,7 @@
       <div style="display: flex; gap: 0.5rem; align-items: center;">
         <span>Logged in as <%= current_user.email %></span>
         <%= link_to "Edit Profile", edit_user_registration_path %>
+        <%= link_to "My Inbox", chats_path %>
         <%= form_with url: destroy_user_session_path, method: :delete, local: true, html: { style: "margin: 0;" } do %>
           <%= submit_tag "Sign out", style: "padding: 0; background: none; border: none; color: #0d6efd; text-decoration: underline; cursor: pointer;" %>
         <% end %>

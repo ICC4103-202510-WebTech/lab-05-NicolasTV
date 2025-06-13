@@ -4,10 +4,18 @@ class Chat < ApplicationRecord
 
   has_many :messages, dependent: :destroy
 
+  scope :for_user, ->(user) {
+    where("sender_id = :id OR receiver_id = :id", id: user.id)
+  }
+
   validates :sender_id, presence: true
   validates :receiver_id, presence: true
   validate :sender_and_receiver_are_different
-
+  
+  def other_participant(current_user)
+    sender_id == current_user.id ? receiver : sender
+  end
+  
   private
 
   def sender_and_receiver_are_different

@@ -1,4 +1,4 @@
-<h1>All Chats</h1>
+<h1>My Inbox</h1>
 
 <%= link_to "Add New Chat", new_chat_path, class: "btn btn-primary" %>
 
@@ -6,8 +6,7 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Sender</th>
-      <th>Receiver</th>
+      <th>Participant</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -15,8 +14,10 @@
     <% @chats.each do |chat| %>
       <tr>
         <td><%= chat.id %></td>
-        <td><%= chat.sender.email if chat.sender %></td>
-        <td><%= chat.receiver.email if chat.receiver %></td>
+        <td>
+          <%= chat.other_participant(current_user).first_name %>
+          <%= chat.other_participant(current_user).last_name %>
+        </td>
         <td>
           <%= link_to "Show", chat_path(chat) %> |
           <%= link_to "Edit", edit_chat_path(chat) %>
@@ -30,6 +31,9 @@
 
 <h2>Navigation</h2>
 <ul>
-  <li><%= link_to "View Users", users_path %></li>
+  <% if current_user&.admin? %>
+    <li><%= link_to "View Users", users_path %></li>
+  <% end %>
   <li><%= link_to "View Messages", messages_path %></li>
 </ul>
+
